@@ -1,0 +1,1 @@
+python3 -c "from EmotionDetection.emotion_detection import emotion_detector; print(emotion_detector('I love learning new programming skills'))" > 3b_format_output
