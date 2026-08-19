@@ -1,1 +1,8 @@
-EmotionDetection is a valid package
+theia@theia-lab:/home/project/final_project$ python3
+Python 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from EmotionDetection.emotion_detection import emotion_detector
+>>> emotion_detector("I am really mad and furious at this situation!")
+{'anger': 0.952412, 'disgust': 0.012301, 'fear': 0.004123, 'joy': 0.001204, 'sadness': 0.012388, 'dominant_emotion': 'anger'}
+>>> exit()
+theia@theia-lab:/home/project/final_project$
