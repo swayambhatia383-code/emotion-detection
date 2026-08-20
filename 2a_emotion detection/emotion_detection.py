@@ -1,7 +1,19 @@
 import json
 import requests
 
+# Version 1: Returns raw response text (For Task 2)
+def emotion_detector_raw(text_to_analyze):
+    url = "https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/EmotionPredict"
+    headers = {
+        "grpc-metadata-mm-model-id": "emotion_single_watson_nlp_v1"
+    }
+    myobj = {"raw_document": {"text": text_to_analyze}}
 
+    response = requests.post(url, json=myobj, headers=headers)
+    return response.text
+
+
+# Version 2: Returns formatted dictionary with dominant emotion (For Task 3)
 def emotion_detector(text_to_analyze):
     url = "https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/EmotionPredict"
     headers = {
